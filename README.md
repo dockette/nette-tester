@@ -31,14 +31,16 @@ docker run
 
 ### Custom
 
-You can modifie tester by your own. List of variables:
+You can modifie tester by your own. See list of variables below.
 
-- FOLDER [/srv/app] (string path to tests folder)
-- SCRIPT [empty] (string path to script with arguments)
-- THREADS [40] (number > 0)
-- INFO [empty] (1)
-- WATCH [empty] (1)
-- PHP [php] (php|php-cgi)
+| VARIABLE  | DEFAULT   | DESCRIPTION                           |
+|---------- |---------- |-------------------------------------- |
+| FOLDER    | /srv/app  | string path to tests folder           |
+| SCRIPT    | empty     | string path to script with arguments  |
+| THREADS   | 40        | number > 0                            |
+| INFO      | empty     | 1                                     |
+| WATCH     | empty     | 1                                     |
+| PHP       | php       | php|php-cgi                           |
 
 ```sh
 docker run 
