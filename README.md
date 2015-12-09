@@ -24,8 +24,8 @@ If there is a composer.json in `/srv/app`, `composer install` is called first.
 On default is command `tester -s -j 40 -p php /srv/app` called.
 
 ```sh
-docker run 
-    -v /path/to/myapp:/srv/app
+docker run \
+    -v /path/to/myapp:/srv/app \
     dockette/nette-tester:latest
 ```
 
@@ -43,19 +43,19 @@ You can modifie tester by your own. See list of variables below.
 | PHP       | php       | php|php-cgi                           |
 
 ```sh
-docker run 
-    -v /path/to/myapp:/srv/app
-    -e FOLDER='/srv/app/a/b/tests'
-    -e INFO=1
-    -e WATCH=1
-    -e THREADS=10
-    -e PHP='php-cgi'
-    dockette/nette-tester:latest
+docker run \
+    -v /path/to/myapp:/srv/app \
+    -e FOLDER='/srv/app/a/b/tests' \
+    -e INFO=1 \
+    -e WATCH=1 \
+    -e THREADS=10 \
+    -e PHP='php-cgi' \
+    dockette/nette-tester:latest \
 ```
 
 ```sh
-docker run 
-    -v /path/to/myapp:/srv/app
-    -e SCRIPT='/srv/app/vendor/bin/tester -s -p php -j 30 /srv/app/tests'
+docker run \
+    -v /path/to/myapp:/srv/app \
+    -e SCRIPT='/srv/app/vendor/bin/tester -s -p php -j 30 /srv/app/tests' \
     dockette/nette-tester:latest
 ```
