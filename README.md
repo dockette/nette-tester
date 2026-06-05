@@ -44,7 +44,7 @@ You can modifie tester by your own. See list of variables below.
 | THREADS   | 40        | number > 0                            |
 | INFO      | empty     | 1                                     |
 | WATCH     | empty     | 1                                     |
-| PHP       | php       | php|php-cgi                           |
+| PHP       | php       | `php` or `php-cgi`                   |
 
 ```sh
 docker run \
@@ -54,7 +54,7 @@ docker run \
     -e WATCH=1 \
     -e THREADS=10 \
     -e PHP='php-cgi' \
-    dockette/nette-tester:latest \
+    dockette/nette-tester:latest
 ```
 
 ```sh
