@@ -1,7 +1,11 @@
-# Nette Tester
+<h1 align=center>Dockette / Nette Tester</h1>
 
-[![Docker Stars](https://img.shields.io/docker/stars/dockette/nette-tester.svg?style=flat)](https://hub.docker.com/r/dockette/letsencrypt/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/dockette/nette-tester.svg?style=flat)](https://hub.docker.com/r/dockette/letsencrypt/)
+<p align=center>
+   <a href="https://github.com/dockette/nette-tester/actions"><img src="https://github.com/dockette/nette-tester/actions/workflows/docker.yml/badge.svg" alt="GitHub Actions"></a>
+   <a href="https://hub.docker.com/r/dockette/nette-tester"><img src="https://img.shields.io/docker/pulls/dockette/nette-tester.svg" alt="Docker Hub pulls"></a>
+   <a href="https://github.com/sponsors/f3l1x"><img src="https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ea4aaa" alt="GitHub Sponsors"></a>
+   <a href="https://github.com/orgs/dockette/discussions"><img src="https://img.shields.io/badge/support-discussions-6f42c1" alt="Support/Discussions"></a>
+</p>
 
 Test your application / library in a Docker container.
 
