@@ -1,7 +1,11 @@
-# Nette Tester
+<h1 align=center>Dockette / Nette Tester</h1>
 
-[![Docker Stars](https://img.shields.io/docker/stars/dockette/nette-tester.svg?style=flat)](https://hub.docker.com/r/dockette/letsencrypt/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/dockette/nette-tester.svg?style=flat)](https://hub.docker.com/r/dockette/letsencrypt/)
+<p align=center>
+   <a href="https://github.com/dockette/nette-tester/actions"><img src="https://github.com/dockette/nette-tester/actions/workflows/docker.yml/badge.svg" alt="GitHub Actions"></a>
+   <a href="https://hub.docker.com/r/dockette/nette-tester"><img src="https://img.shields.io/docker/pulls/dockette/nette-tester.svg" alt="Docker Hub pulls"></a>
+   <a href="https://github.com/sponsors/f3l1x"><img src="https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ea4aaa" alt="GitHub Sponsors"></a>
+   <a href="https://github.com/orgs/dockette/discussions"><img src="https://img.shields.io/badge/support-discussions-6f42c1" alt="Support/Discussions"></a>
+</p>
 
 Test your application / library in a Docker container.
 
@@ -40,7 +44,7 @@ You can modifie tester by your own. See list of variables below.
 | THREADS   | 40        | number > 0                            |
 | INFO      | empty     | 1                                     |
 | WATCH     | empty     | 1                                     |
-| PHP       | php       | php|php-cgi                           |
+| PHP       | php       | `php` or `php-cgi`                   |
 
 ```sh
 docker run \
@@ -50,7 +54,7 @@ docker run \
     -e WATCH=1 \
     -e THREADS=10 \
     -e PHP='php-cgi' \
-    dockette/nette-tester:latest \
+    dockette/nette-tester:latest
 ```
 
 ```sh

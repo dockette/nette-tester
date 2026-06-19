@@ -13,12 +13,12 @@ fi
 # Run common Nette\Tester or given script
 if [ -z "$SCRIPT" ] ; then
   # Print info
-  if [ -n $INFO ] ; then
+  if [ -n "$INFO" ] ; then
     $TESTER_BIN -i -p $PHP
   fi
 
   # Run Nette\Tester
-  if [ -n $WATCH ] ; then
+  if [ -n "$WATCH" ] ; then
   	$TESTER_BIN -s -j $THREADS -p $PHP -w $FOLDER
   else
   	$TESTER_BIN -s -j $THREADS -p $PHP $FOLDER
