@@ -2,9 +2,14 @@
 FROM debian:jessie
 
 # Environment
-ENV TESTER_PATH /srv/tester/
-ENV TESTER_BIN /srv/tester/vendor/bin/tester
-ENV APP_PATH /srv/app/
+ENV TESTER_PATH=/srv/tester/
+ENV TESTER_BIN=/srv/tester/vendor/bin/tester
+ENV APP_PATH=/srv/app/
+
+# Jessie is EOL, packages live on archive.debian.org
+RUN echo "deb http://archive.debian.org/debian jessie main" > /etc/apt/sources.list && \
+    echo "deb http://archive.debian.org/debian-security jessie/updates main" >> /etc/apt/sources.list && \
+    printf 'Acquire::Check-Valid-Until "false";\nAPT::Get::AllowUnauthenticated "true";\n' > /etc/apt/apt.conf.d/99archive
 
 # Install PHP, cURL, Git
 RUN apt-get update && \
